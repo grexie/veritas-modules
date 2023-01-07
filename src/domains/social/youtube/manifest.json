@@ -1,0 +1,4 @@
+{
+  "domain": ["youtube.com", "*.youtube.com"],
+  "main": "./index.ts"
+}

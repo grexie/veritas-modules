@@ -1,0 +1,4 @@
+{
+  "domain": ["twitter.com"],
+  "main": "./index.ts"
+}

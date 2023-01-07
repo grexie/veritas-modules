@@ -1,0 +1,4 @@
+{
+  "domain": "tiktok.com",
+  "main": "./index.ts"
+}
