@@ -1,0 +1,37 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.10.0
+        with:
+          access_token: ${{ github.token }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Cache modules
+        id: cache-modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key:
+            ${{ matrix.node-version }}-${{ runner.OS }}-build-${{
+            hashFiles('package.json', 'yarn.lock') }}
+      - name: Install dependencies
+        if: steps.cache-modules.outputs.cache-hit != 'true'
+        run: yarn --frozen-lockfile
+      - name: Deploy
+        run: |
+          cd ${{ github.workspace }}
+          git config user.email "hello@grexie.com"
+          git config user.name "Grexie"
+          yarn deploy -r https://${{ github.token }}@github.com/${{ github.repo }}.git

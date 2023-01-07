@@ -1,0 +1,4 @@
+{
+  "domain": "news.bbc.co.uk",
+  "main": "./index.ts"
+}

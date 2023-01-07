@@ -1,0 +1,5 @@
+{
+  "defaultRoute": {
+    "manifest": "./default-route/manifest.json"
+  }
+}
