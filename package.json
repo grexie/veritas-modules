@@ -23,6 +23,7 @@
     "@types/glob": "^8.0.0",
     "@types/react": "^18.0.26",
     "babel-loader": "^9.1.0",
+    "emit-file-webpack-plugin": "^2.0.1",
     "generate-json-webpack-plugin": "^2.0.0",
     "gh-pages": "^4.0.0",
     "glob": "^8.0.3",

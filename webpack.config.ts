@@ -3,6 +3,7 @@ import fs from "fs";
 import { Configuration, EntryObject } from "webpack";
 import glob from "glob";
 import GenerateJSONPlugin from "generate-json-webpack-plugin";
+import EmitFilePlugin from "emit-file-webpack-plugin";
 
 interface Config {
   routes: Route[];
@@ -157,6 +158,10 @@ const config: Configuration = {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".cjs", ".mjs"],
   },
   plugins: [
+    new EmitFilePlugin({
+      filename: "CNAME",
+      content: "modules.veritas.grexie.com",
+    }),
     new GenerateJSONPlugin("app-config.json", modules.config, null, 2) as any,
     ...Object.entries(modules.manifests).map(
       ([filename, asset]) =>
