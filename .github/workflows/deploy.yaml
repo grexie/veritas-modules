@@ -34,4 +34,4 @@ jobs:
           cd ${{ github.workspace }}
           git config user.email "hello@grexie.com"
           git config user.name "Grexie"
-          yarn deploy -r https://${{ github.token }}@github.com/${{ github.repo }}.git
+          yarn deploy -r https://${{ github.token }}@github.com/${{ github.repository }}.git
