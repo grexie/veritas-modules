@@ -1,0 +1,7 @@
+{
+  "domain": [
+    "youtube.com",
+    "*.youtube.com"
+  ],
+  "main": "./grexie-veritas.js"
+}

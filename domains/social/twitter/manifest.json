@@ -1,0 +1,6 @@
+{
+  "domain": [
+    "twitter.com"
+  ],
+  "main": "./grexie-veritas.js"
+}

@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "domain": "news.bbc.co.uk",
+      "manifest": "./domains/media/bbc/manifest.json"
+    },
+    {
+      "domain": "google.com",
+      "manifest": "./domains/search/google/manifest.json"
+    },
+    {
+      "domain": "instagram.com",
+      "manifest": "./domains/social/instagram/manifest.json"
+    },
+    {
+      "domain": "tiktok.com",
+      "manifest": "./domains/social/tiktok/manifest.json"
+    },
+    {
+      "domain": [
+        "twitter.com"
+      ],
+      "manifest": "./domains/social/twitter/manifest.json"
+    },
+    {
+      "domain": [
+        "youtube.com",
+        "*.youtube.com"
+      ],
+      "manifest": "./domains/social/youtube/manifest.json"
+    }
+  ],
+  "defaultRoute": {
+    "manifest": "./default-route/manifest.json"
+  }
+}
